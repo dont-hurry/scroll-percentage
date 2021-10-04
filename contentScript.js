@@ -72,8 +72,13 @@ function updateText() {
   );
 
   let windowHeight = window.innerHeight;
-  let percentage = (scrollY * 100) / (documentHeight - windowHeight);
+  let heightToScroll = documentHeight - windowHeight;
+  let percentage =
+    heightToScroll === 0
+      ? 100
+      : (scrollY * 100) / (documentHeight - windowHeight);
   let roundedPercentage = Math.round(percentage * 100) / 100;
+
   container.textContent = `${roundedPercentage}%`;
 }
 
