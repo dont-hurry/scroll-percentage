@@ -1,0 +1,80 @@
+#root {
+  margin: 15px auto;
+  width: 720px;
+  user-select: none;
+}
+
+.row {
+  padding: 15px 15px 20px;
+  font-size: 1rem;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.row:hover {
+  background-color: rgb(235, 245, 255);
+}
+
+.row > div:first-child {
+  font-weight: bold;
+}
+
+.row > div:not(:first-child) {
+  margin-top: 10px;
+}
+
+input[type="text"] {
+  font-size: 0.9rem;
+}
+
+label {
+  cursor: pointer;
+}
+
+#color-tooltip {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  left: 0;
+  position: fixed;
+  top: 0;
+  font-size: 0.9rem;
+  color: #fff;
+  background: #666;
+  border-radius: 5px;
+  user-select: none;
+
+  /* Fade-out effect                                  */
+  /* Check this: https://stackoverflow.com/a/50546888 */
+  height: 0;
+  overflow: hidden;
+  transition: height 0ms 250ms, opacity 250ms 0ms ease-out;
+  opacity: 0;
+}
+
+#color-tooltip.visible {
+  /* Fade-in effect */
+  height: 110px;
+  transition: height 0ms 0ms, opacity 250ms 0ms ease-out;
+  opacity: 1;
+}
+
+#color-tooltip ul {
+  padding-right: 15px;
+  padding-inline-start: 35px;
+}
+
+#color-tooltip ul li:not(:first-child) {
+  margin-top: 12.5px;
+}
+
+#color-tooltip mark {
+  margin: 0 5px;
+  padding: 2.5px 7.5px;
+  color: #fff;
+  background: #333;
+  border-radius: 5px;
+}
+
+.show-color-tooltip {
+  cursor: pointer;
+}

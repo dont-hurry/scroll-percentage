@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap");
+
+      #root {
+        align-items: flex-start;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        font-family: "Open Sans", sans-serif;
+        white-space: nowrap;
+      }
+
+      #root > div {
+        align-items: center;
+        display: flex;
+        height: 25px;
+        justify-content: center;
+      }
+
+      #root > div > label {
+        cursor: pointer;
+
+        user-select: none;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div id="root">
+      <div>
+        <label for="enabled">Enabled</label>
+        <input type="checkbox" id="enabled" />
+      </div>
+      <div><button>Options</button></div>
+    </div>
+    <script src="popup.js"></script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Scroll Percentage - Options</title>
+    <link rel="stylesheet" href="css/normalize.css" />
+    <link rel="stylesheet" href="css/options.css" />
+  </head>
+
+  <body>
+    <div id="root">
+      <div class="row">
+        <div>Extension: Enabled</div>
+        <div>
+          <input type="checkbox" id="enabled" />
+          <label for="enabled">
+            Controls whether the extension is enabled.
+          </label>
+        </div>
+      </div>
+      <div class="row">
+        <div>Appearance: Position</div>
+        <div>Default: <span id="default-position"></span></div>
+        <div>
+          <select id="position">
+            <option value="top-left">Top-left</option>
+            <option value="top-right">Top-right</option>
+            <option value="bottom-right">Bottom-right</option>
+            <option value="bottom-left">Bottom-left</option>
+          </select>
+        </div>
+      </div>
+      <div class="row">
+        <div>Appearance: Font Size (px)</div>
+        <div>Default: <span id="default-font-size"></span></div>
+        <div><input type="text" id="font-size" /></div>
+      </div>
+      <div class="row">
+        <div>Appearance: Font Color</div>
+        <div>Default: <span id="default-font-color"></span></div>
+        <div>
+          <input type="text" id="font-color" />
+          <span class="show-color-tooltip">❓</span>
+        </div>
+      </div>
+      <div class="row">
+        <div>Appearance: Background Color</div>
+        <div>Default: <span id="default-background-color"></span></div>
+        <div>
+          <input type="text" id="background-color" />
+          <span class="show-color-tooltip">❓</span>
+        </div>
+      </div>
+      <div class="row">
+        <div>Appearance: Background Color (hover)</div>
+        <div>Default: <span id="default-background-color-hover"></span></div>
+        <div>
+          <input type="text" id="background-color-hover" />
+          <span class="show-color-tooltip">❓</span>
+        </div>
+      </div>
+      <div class="row">
+        <div>Appearance: Border Radius (px)</div>
+        <div>Default: <span id="default-border-radius"></span></div>
+        <div><input type="text" id="border-radius" /></div>
+      </div>
+    </div>
+    <div id="color-tooltip">
+      <ul>
+        <li>Color keywords, such as <mark>royalblue</mark></li>
+        <li>
+          RGB colors, such as <mark>#4169e1</mark>,
+          <mark>rgb(65, 105, 225)</mark>
+        </li>
+        <li>HSL colors, such as <mark>hsl(225deg 73% 57%)</mark></li>
+      </ul>
+    </div>
+    <script src="options.js"></script>
+  </body>
+</html>

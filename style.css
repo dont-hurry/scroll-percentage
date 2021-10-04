@@ -1,0 +1,21 @@
+/* This file is used for the content script */
+#scroll-percentage-container {
+  display: none;
+  padding: 5px 10px;
+  position: fixed;
+
+  /* Some website will set the width of the children elements of the body to */
+  /* 100%                                                                    */
+  width: initial;
+
+  z-index: 2147483647;
+
+  cursor: default;
+
+  transition: 250ms ease-out;
+}
+
+#scroll-percentage-container:hover {
+  /* Use `!important` to override the injected style */
+  background: var(--background-color-hover) !important;
+}
